@@ -1,0 +1,63 @@
+@import "../index.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@100..900&display=swap");
+
+@theme {
+  --color-primary: #e58411;
+  --color-secondary: #1e1e1e;
+  --secondary-bg: #f7f7f7;
+  --font-primary: "Poppins", sans-serif;
+}
+
+@theme .dark {
+  --color-primary: #e58411;
+  --color-secondary: #f7f7f7;
+  --secondary-bg: #1e1e1e;
+  --font-primary: "Gilroy", sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: local("Gilroy"),
+    url(../assets/fonts/gilroy/Gilroy-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 500;
+  src: local("Gilroy"),
+    url(../assets/fonts/gilroy/Gilroy-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 700;
+  src: local("Gilroy"),
+    url(../assets/fonts/gilroy/Gilroy-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 900;
+  src: local("Gilroy"),
+    url(../assets/fonts/gilroy/Gilroy-Black.ttf) format("opentype");
+}
+
+.section-container {
+  @apply max-w-screen-2xl container mx-auto py-6 px-4;
+}
+
+/* Custom Swiper Navigation Styles */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  @apply px-4 py-2 ring-1 ring-primary hover:text-white hover:bg-primary rounded-full bg-white text-black text-lg;
+}
+
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:after {
+  @apply px-4 py-2 ring-1 ring-primary hover:text-white hover:bg-primary rounded-full bg-white text-black text-lg;
+}
