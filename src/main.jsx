@@ -8,30 +8,23 @@ import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/about", element: <About /> },
+        { path: "/contact", element: <Contact /> },
+        { path: "/shop", element: <Shop /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/shop",
-        element: <Shop />,
-      },
-    ],
-  },
-]);
+    basename: "/Square-Furniture-Landing/",
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
